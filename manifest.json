@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Pinnable Item URL Extractor",
+  "version": "1.0",
+  "description": "Extract text content from specific elements and export as JSON file",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
